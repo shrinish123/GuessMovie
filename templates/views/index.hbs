@@ -9,18 +9,26 @@
 <body>
 
 
-     <h1>Movie new App</h1>
+     <h1>Guess Movie</h1>
 
      <form id ='search-form'>
          <input type="text" id='input' class='searchInput'  placeholder="Search your movies">
          <button class='searchBtn'>Search</button>
      </form>
 
-     <img id='img' src="" alt="">
-     <h3 id='title'></h3>
-     <p id='director'></p>
-     <p id='rating'></p>
-     <p id='year'></p>
+
+    <div class="movie-card" id="movie-card">
+        <img id='img' src="" alt="">
+        <div class="movie-card-title">
+            <h3 id='title'></h3>
+        </div>
+        <hr>
+        <div class="movie-card-content">
+            <p id='director'></p>
+            <p id='rating'></p>
+            <p id='year'></p>
+        </div>
+    </div>
 
 
      <script src='./js/app.js'></script>
