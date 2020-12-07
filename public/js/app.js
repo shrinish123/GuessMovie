@@ -4,7 +4,7 @@
 const search = document.getElementById('input')
 const searchForm = document.getElementById('search-form')
 
-
+const movieCard = document.getElementById('movie-card');
 const title = document.getElementById('title');
 const director =document.getElementById('director');
 const rating =document.getElementById('rating');
@@ -17,14 +17,13 @@ searchForm.addEventListener('submit', (e)=>{
     e.preventDefault()
 
     const movie = search.value
-
     movieName = movie.replace(/\s/g,'%20');
     console.log(movieName);
 
     fetch('http://localhost:3000/movie?name='+ movieName).then((response)=>{
      
         response.json().then((data)=>{
-            
+             movieCard.style.visibility = "visible";
              title.innerHTML = data.movieName;
              director.innerHTML = data.director
              rating.innerHTML= data.rating
