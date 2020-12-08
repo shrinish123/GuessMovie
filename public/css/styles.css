@@ -15,7 +15,7 @@ h1, h3{
     text-align: center;
     font-family: 'Verdana', sans-serif;
     font-weight: bold;
-    color: dodgerblue;
+    color: #1A0B21;
 }
 h1{
     font-family: 'batman';
@@ -30,7 +30,7 @@ h1{
     visibility: hidden;
     font-family: 'Spartan', sans-serif;
     background-color: #ffff;
-    color: dodgerblue;
+    color: #21155E;
     margin: 50px;
     border-radius: 25px;
     max-width: 300px;
@@ -46,10 +46,20 @@ h1{
     transform: scale(1.02);
     transition: .3s;
 }
-.movie-card-content {
-    padding: 30px;
+#director,#rating,#year{
+    font-weight: 550;
+    
 }
-
+.movie-card-content {
+    padding: 10px;
+}
+.content-table{
+    width:100%;
+    margin:10px;
+}
+.content-table td{
+    text-align: center;
+}
 .searchInput{
     padding:15px;
     min-width:300px;
