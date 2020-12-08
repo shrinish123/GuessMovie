@@ -1,14 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;400;700&display=swap');
 
 body {
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
+    background-image: linear-gradient(to top, #0b060c, #1a0b21, #220f36, #25124e, #1e1768);
+    background-size: cover;
+    background-attachment: fixed;
 }
+@font-face {
+    font-family: batman;
+    src: url(batmfa__.ttf) format('truetype');
+  }
 
 h1, h3{
     text-align: center;
-    font-family: 'Spartan', sans-serif;
+    font-family: 'Verdana', sans-serif;
     font-weight: bold;
-    color: white;
+    color: dodgerblue;
+}
+h1{
+    font-family: 'batman';
+    font-size:50px;
+    color:#ffff;
 }
 #search-form {
     text-align: center;
@@ -17,12 +29,54 @@ h1, h3{
 .movie-card {
     visibility: hidden;
     font-family: 'Spartan', sans-serif;
-    background-color: teal;
-    color: white;
+    background-color: #ffff;
+    color: dodgerblue;
     margin: 50px;
     border-radius: 25px;
     max-width: 300px;
+    padding: 10px;
+    box-shadow: 1px 2px 10px lightgray;
+}
+#img{
+    height:300px;
+    width:100%;
+    border-radius:25px 25px 0 0;
+}
+#img:hover{
+    transform: scale(1.02);
+    transition: .3s;
 }
 .movie-card-content {
     padding: 30px;
+}
+
+.searchInput{
+    padding:15px;
+    min-width:300px;
+    border-radius: 5px;
+    border:none;
+    outline:none;
+}
+.searchInput:hover{
+    box-shadow: 1px 2px 20px lightskyblue;
+    border:lightblue;
+}
+.searchBtn{
+    padding:12px;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #ffff;
+    color:dodgerblue;
+    border:2px solid dodgerblue;
+    cursor: pointer;
+}
+.searchBtn:hover{
+    background-color: dodgerblue;
+    color:#ffff;
+}
+
+.card-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
