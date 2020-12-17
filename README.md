@@ -23,7 +23,7 @@ GuessMovie is a  movie Guessing game alongwith a search engine for your movies, 
 * Download and install Git.
 * Fork the Repository.
 * Clone the repository to your local machine $ git clone https://github.com//GuessMovie.git
-* Change directory to Mumble $ cd GuessMovie
+* Change directory to GuessMovie $ cd GuessMovie
 * To install the npm modules : $ npm install
 * To start running project on localhost , :$ npm start
 * Open localhost:3000 on your favorite browser
