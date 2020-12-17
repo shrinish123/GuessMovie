@@ -24,9 +24,11 @@ improving the game and adding more features to the game.
 * Download and install Git.
 * Fork the Repository.
 * Clone the repository to your local machine $ git clone https://github.com//GuessMovie.git
-* Change directory to Mumble $ cd GuessMovie
-* To install the npm modules : $ npm install
-* To start running project on localhost , :$ npm start
+* Change directory to *Guessmovie* `$ cd GuessMovie`
+* To install the npm modules: `$ npm install`
+* To start running project on localhost: `$ npm start`
+    + During development, start with `$ npm run dev` instead, to automatically restart the server everytime to change
+      the code
 * Open localhost:3000 on your favorite browser
 
 # Contribution
