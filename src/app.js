@@ -7,6 +7,8 @@ const hbs = require('hbs');
 const movieSearchAPICall = require('./utils/movieSearch');
 const config = require('./utils/config')
 
+
+const port = 3000
 const app = express()
 
 // Serving static files
@@ -30,7 +32,7 @@ app.get('/', (req, res) => {
 
 app.get('/movie', (req, res) => {
     if (!req.query.name) {
-        return res.send({
+        return res.status(400).send({
             error: "Your query string is empty"
         })
     }
@@ -38,7 +40,10 @@ app.get('/movie', (req, res) => {
 
         if (error) {
             return console.log(err);
-        } else if (movieInfo.Response == 'False') {
+        } else if (movieInfo.Response === 'False') {
+            res.status(404).send({
+                error: `We were unable to find ${req.query.name}`,
+            })
             return console.log(`We were unable to find ${req.query.name}`);
         }
         return res.send({
@@ -53,7 +58,7 @@ app.get('/movie', (req, res) => {
 
 app.get('/guess', (req, res) => {
     if (!req.query.id) {
-        return res.send({
+        return res.status(400).send({
             error: "No id was passed"
         })
 
@@ -68,7 +73,7 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(config.PORT, () => {
-    console.log(`Server is up on ${config.PORT}`)
+app.listen(port, () => {
+    console.log(`Server is up on ${port}`)
 })
 
